@@ -20,7 +20,16 @@ function checkCache(req, res, next) {
     next()
 }
 
+function clearCache(productId) {
+    delete cache['/products']
+
+    if (productId) {
+        delete cache[`/products/${productId}`]
+    }
+}
+
 module.exports = {
     cache,
-    checkCache
+    checkCache,
+    clearCache
 }

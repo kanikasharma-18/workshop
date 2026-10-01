@@ -7,6 +7,21 @@ async function delayReadFile() {
     return await database.readProducts()
 }
 
+async function addProduct(product) {
+    return await database.addProduct(product)
+}
+
+async function updateProduct(id, product) {
+    return await database.updateProduct(id, product)
+}
+
+async function deleteProduct(id) {
+    return await database.deleteProduct(id)
+}
+
 module.exports = {
-    delayReadFile
+    delayReadFile,
+    addProduct,
+    updateProduct,
+    deleteProduct
 }
