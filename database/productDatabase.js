@@ -8,6 +8,7 @@ async function readProducts() {
     console.log(products)
     return JSON.parse(products)
 }
+// readProducts()
 
 module.exports = {
     readProducts
